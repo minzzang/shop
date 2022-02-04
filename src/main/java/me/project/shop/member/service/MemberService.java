@@ -22,11 +22,4 @@ public class MemberService {
             throw new BusinessException(BusinessMessage.DUPLICATE_EMAILS);
         }
     }
-
-    public void login(Member loginRequestMember) {
-        Member findMember = memberRepository.findByEmail(loginRequestMember.getEmail())
-                .orElseThrow(() -> new BusinessException(BusinessMessage.EMAIL_MISMATCH));
-
-        findMember.checkPassword(loginRequestMember.getPassword());
-    }
 }

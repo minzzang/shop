@@ -24,8 +24,6 @@ public class Address {
 
     private String street;
 
-    private Long memberId;
-
     public Address(String city, String zipcode, String street) {
         this.city = city;
         this.zipcode = zipcode;
