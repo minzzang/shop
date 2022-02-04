@@ -4,7 +4,7 @@ import me.project.shop.member.entity.Member;
 
 public interface LoginService {
 
-    void login(Member toEntity);
+    void login(Member member);
 
     void logout();
 }
